@@ -68,6 +68,7 @@ def StateMachineProcess(Message):
         elif Message.lower().startswith('valrm'): 
             Message=Message.replace('valrm ','')
             print('\t\tvalrm: "{}"'.format(Message))
+            
             del PVList[Message]
             PVStr=json.dumps(PVList)
             return PVStr
